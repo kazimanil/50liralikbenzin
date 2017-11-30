@@ -22,20 +22,21 @@ veri[tarih >= as.Date("2017-01-01")
 veri[, ':='(kursunsuz50gy = 100 *kursunsuz50 / BenzinTuk)]
 
 # Graphics Output ----
-jpeg(filename = "KaçLitre.jpeg", width = 1920, height = 1080)
+dev.off()
+jpeg(filename = "KaÃ§Litre.jpeg", width = 1920, height = 1080)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50)) + 
 	geom_line(linetype = "dashed") + 
 	geom_smooth(color = "red") +
-	labs(title = "50 liralık benzin kaç litre ediyor?", x = "Tarih", y = "Litre Kurşunsuz Benzin") +
+	labs(title = "50 liralÄ±k benzin kaÃ§ litre ediyor?", x = "Tarih", y = "Litre KurÅŸunsuz Benzin") +
 	theme_minimal() +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "KaçKilometre.jpeg", width = 1920, height = 1080)
+jpeg(filename = "KaÃ§Kilometre.jpeg", width = 1920, height = 1080)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50gy)) + 
 	geom_line(linetype = "dashed") + 
 	geom_smooth(color = "red") +
-	labs(title = "50 liralık benzin kaç km gidiyor?", x = "Tarih", y = "Kilometre") +
+	labs(title = "50 liralÄ±k benzin kaÃ§ km gidiyor?", x = "Tarih", y = "Kilometre") +
 	theme_minimal() +
 	theme(text = element_text(size=30))
 dev.off()
