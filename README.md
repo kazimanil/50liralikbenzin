@@ -17,3 +17,7 @@ https://www.autoevolution.com/volkswagen/golf-5-doors/
 ## Kapsam
 05-01-2007 ve 30-11-2017 arası benzin fiyatı verisi bulunmaktadır.
 Tüketicinin her yeni model ile beraber arabasını yenilediği varsayılmaktadır.
+
+## Grafik
+Kesikli Siyah Çizgiler: Belirli bir tarihteki gerçek değeri veriyor.
+Kırmızı Düz Çizgi: GAM Smoothing-Out yöntemiyle hesaplanmış seyir. Bu hesap ile eğilimi (trend) tespit etmek mümkün hâle geliyor.
