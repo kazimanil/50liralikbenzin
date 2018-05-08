@@ -30,7 +30,7 @@ Ek olarak;
 
 * Bu güncelleme sonrasında, derlediğim benzin fiyatları verisini de paylaşıma açıyorum, neden daha önce açmamış isem zaten??
 * Temaları güncelledim ve temamı oluşturan dosyayı yükledim.
-* Doğru smoothing-out tekniğini kullanıp, kullanmadığımı sorguladım. Veriye daha iyi uyduğunu düşündüğüm için **GAM yöntemini terkettim**. Onun yerine zaman ile km ve zaman ile lt arasında 4. derecen bir ilişki olduğunu varsayarak yeni grafikleri çizdirdim.
+* Doğru smoothing-out tekniğini kullanıp, kullanmadığımı sorguladım. Veriye daha iyi uyduğunu düşündüğüm için **GAM yöntemini terkettim**. Onun yerine zaman ile km ve zaman ile lt arasında **4. dereceden bir ilişki olduğunu varsayarak** yeni grafikleri çizdirdim.
 
 ## Yorumlar
 Yapacağınız her yorum benim için değerli olacaktır. T A M A M mı?
