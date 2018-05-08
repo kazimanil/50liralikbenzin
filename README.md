@@ -31,6 +31,9 @@ Ek olarak;
 * Bu güncelleme sonrasında, derlediğim benzin fiyatları verisini de paylaşıma açıyorum, neden daha önce açmamış isem zaten??
 * Temaları güncelledim ve temamı oluşturan dosyayı yükledim.
 * Doğru smoothing-out tekniğini kullanıp, kullanmadığımı sorguladım. Veriye daha iyi uyduğunu düşündüğüm için **GAM yöntemini terkettim**. Onun yerine zaman ile km ve zaman ile lt arasında **4. dereceden bir ilişki olduğunu varsayarak** yeni grafikleri çizdirdim.
+* 2018 yılının toplam zam miktarını değerlendirirken; **sadece 5 aylık veriyi** dahil ettiğimi göz önünde bulundurunuz.
+
+Görseller için: [2017AralıkVersiyonu](https://twitter.com/kazimanil/status/936331512638791681), [2018MayısVersiyonu](https://twitter.com/kazimanil/status/993926671752417280).
 
 ## Yorumlar
 Yapacağınız her yorum benim için değerli olacaktır. T A M A M mı?
