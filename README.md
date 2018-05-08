@@ -17,3 +17,8 @@ https://www.autoevolution.com/volkswagen/golf-5-doors/
 ## Kapsam
 05-01-2007 ve 30-11-2017 arası benzin fiyatı verisi bulunmaktadır.
 Tüketicinin her yeni model ile beraber arabasını yenilediği varsayılmaktadır.
+
+## Güncelleme
+8 Mayıs 2018 tarihi itibariyle $/₺ kurunun 4.30 değerini aşması sonucu bu çalışmayı güncelleme ihtiyacı hissettim.
+Yukarıdaki belirlediğim kurallar baki kalmak üzere 01-12-2017 ile 08-05-2018 tarihleri arası benzin verilerini yine aynı kaynaktan derledim.
+Ek olarak, bu güncelleme sonrasında, derlediğim benzin fiyatları verisini de paylaşıma açıyorum, neden daha önce açmamış isem zaten??
