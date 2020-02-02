@@ -25,13 +25,13 @@ Kırmızı Düz Çizgi: GAM Smoothing-Out yöntemiyle hesaplanmış seyir. Bu he
 
 ## Sonuçlar
 
-![alt text]["/KacLitre.jpeg"]
+![Kaç Litre Benzin Alabildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/KacLitre.jpeg)
 
-![alt text]["/KacKilometre.jpeg"]
+![Kaç Kilometre Yol Gidebildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/KacKilometre.jpeg)
 
-![alt text]["/Degisimler_(Senelik_Adet).jpeg"]
+![Senelik Değişim Adedi](https://github.com/kazimanil/50liralikbenzin/blob/master/Degisimler_(Senelik_Adet).jpeg)
 
-![alt text]["/Degisimler_(Senelik_TL).jpeg"]
+![Senelik Zam Kıyaslaması (TL)](https://github.com/kazimanil/50liralikbenzin/blob/master/Degisimler_(Senelik_TL).jpeg)
 
 # Güncellemeler
 
