@@ -44,7 +44,7 @@ veri_yil[, toplam_TL := ort_TL * adet]
 
 # Graphics Output ----
 dev.off()
-jpeg(filename = "KacLitre.jpeg", width = 1024, height = 768)
+jpeg(filename = "Grafik1.jpeg", width = 1024, height = 768)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50)) + 
 	geom_line(size = 1, linetype = "dotted", colour = "orange") + 
 	geom_smooth(size = 2, color = "turquoise", se = FALSE,  method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
@@ -55,7 +55,7 @@ ggplot(data = veri, aes(x = tarih, y = kursunsuz50)) +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "KacKilometre.jpeg", width = 1024, height = 768)
+jpeg(filename = "Grafik2.jpeg", width = 1024, height = 768)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50gy)) + 
 	geom_line(size = 1, linetype = "dotted", colour = "orange") + 
 	geom_smooth(size = 2, color = "turquoise", se = FALSE, method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
@@ -66,7 +66,7 @@ ggplot(data = veri, aes(x = tarih, y = kursunsuz50gy)) +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "Degisimler_(Senelik_Adet).jpeg", 1024, 768)
+jpeg(filename = "Grafik3.jpeg", 1024, 768)
 ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = adet, col = degisim)) +
 	geom_line(size = 2) +
 	labs(title = "Senelik Zam ve İndirim Adetleri", x = "Yıl", y = "Adet") + 
@@ -79,7 +79,7 @@ ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = adet, col = degisim)) +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "Degisimler_(Senelik_TL).jpeg", 1024, 768)
+jpeg(filename = "Grafik4.jpeg", 1024, 768)
 ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = toplam_TL, col = degisim)) +
 	geom_line(size = 2) +
 	labs(title = "Senelik Zam ve İndirim Miktarları (TL)", x = "Yıl", y = "TL") + 
