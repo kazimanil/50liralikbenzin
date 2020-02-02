@@ -26,14 +26,14 @@ Aşağıda yayınlanacak ilk iki grafikte, turuncu kesikli çizgiler belirli bir
 Ayrıca, özellikle 2007-2011 ve 2017-2019 yılları arasında fakirleşmenin ivme kazandığını ve bu ivmenin 2011 ile 2017 yılları arasında  ortadan kaybolduğunu söylemek mümkün. 
 
 
-![Kaç Litre Benzin Alabildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik1.jpeg)
+![Kaç Litre Benzin Alabildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_1.jpeg)
 
-![Kaç Kilometre Yol Gidebildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik2.jpeg)
+![Kaç Kilometre Yol Gidebildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_2.jpeg)
 
 Fiyatların yükseliyor oluşu ekonomi için bir sorun teşkil etse de, öngörülemiyor oluşu daha büyük bir sorun teşkil etmektedir. Bu nedenle son iki grafikte, senelik değişim adedi ve toplam zam miktarlarını kıyasladım. Yukarıda ivmenin arttığı yıllar olarak nitelendirdiğim yıllarda hem TL miktar hem de yapılan **güncelleme** tipi olarak, zamlar indirimlerin önüne geçmektedir. Bu da özellikle son yıllarda 2008deki kriz benzeri bir durgunluğun yaşandığının en temel kanıtıdır.
 
 Son yıllarda maalesef, hem fiyatlarda önlemeyen bir yükseliş hem de belirsizlik hakimdir. Umuyorum ki, en kısa sürede, bu durum son bulacak ve ekonomimiz çok daha iyi bir duruma gelecektir.
 
-![Senelik Değişim Adedi](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik3.jpeg)
+![Senelik Değişim Adedi](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_3.jpeg)
 
-![Senelik Zam Kıyaslaması (TL)](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik4.jpeg)
+![Senelik Zam Kıyaslaması (TL)](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_4.jpeg)

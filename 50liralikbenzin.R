@@ -44,7 +44,7 @@ veri_yil[, toplam_TL := ort_TL * adet]
 
 # Graphics Output ----
 dev.off()
-jpeg(filename = "Grafik1.jpeg", width = 1024, height = 768)
+jpeg(filename = "Grafik_1.jpeg", width = 1024, height = 768)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50)) + 
 	geom_line(size = 1, linetype = "dotted", colour = "orange") + 
 	geom_smooth(size = 2, color = "turquoise", se = FALSE,  method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
@@ -55,7 +55,7 @@ ggplot(data = veri, aes(x = tarih, y = kursunsuz50)) +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "Grafik2.jpeg", width = 1024, height = 768)
+jpeg(filename = "Grafik_2.jpeg", width = 1024, height = 768)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50gy)) + 
 	geom_line(size = 1, linetype = "dotted", colour = "orange") + 
 	geom_smooth(size = 2, color = "turquoise", se = FALSE, method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
@@ -66,27 +66,27 @@ ggplot(data = veri, aes(x = tarih, y = kursunsuz50gy)) +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "Grafik3.jpeg", 1024, 768)
-ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = adet, col = degisim)) +
-	geom_line(size = 2) +
+jpeg(filename = "Grafik_3.jpeg", 1024, 768)
+ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = adet, fill = degisim)) +
+	geom_col(position = "dodge") +
 	labs(title = "Senelik Zam ve İndirim Adetleri", x = "Yıl", y = "Adet") + 
-	scale_color_discrete(name = "Güncelleme Tipi\n",
+	scale_fill_discrete(name = "Güncelleme Tipi\n",
 											 breaks = c("Zam", "indirim"), 
 											 labels = c(" Zam", " İndirim")) +
-  scale_x_continuous(breaks = seq(2007, 2020, 1)) +
-  scale_y_continuous(breaks = seq(0, 40, 5)) +
+  scale_x_continuous(breaks = seq(2007, 2019, 1)) +
+  scale_y_continuous(breaks = seq(0, 30, 5)) +
 	gg_theme() +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "Grafik4.jpeg", 1024, 768)
-ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = toplam_TL, col = degisim)) +
-	geom_line(size = 2) +
+jpeg(filename = "Grafik_4.jpeg", 1024, 768)
+ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = toplam_TL, fill = degisim)) +
+	geom_col(position = "dodge") +
 	labs(title = "Senelik Zam ve İndirim Miktarları (TL)", x = "Yıl", y = "TL") + 
-	scale_color_discrete(name = "Güncelleme Tipi\n",
+  scale_fill_discrete(name = "Güncelleme Tipi\n",
 											 breaks = c("Zam", "indirim"), 
 											 labels = c("Toplam Yapılan\nSenelik Zam (TL)", "Toplam Yapılan\nSenelik İndirim (TL)")) +
-  scale_x_continuous(breaks = seq(2007, 2020, 1)) +
+  scale_x_continuous(breaks = seq(2007, 2019, 1)) +
   scale_y_continuous(breaks = seq(0, 3, .25)) +
 	gg_theme() +
 	theme(text = element_text(size=30))
