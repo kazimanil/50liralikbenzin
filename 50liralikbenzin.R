@@ -44,42 +44,74 @@ veri_yil[, toplam_TL := ort_TL * adet]
 
 # Graphics Output ----
 dev.off()
-jpeg(filename = "KacLitre.jpeg", width = 1920, height = 1080)
+jpeg(filename = "KacLitre.jpeg", width = 1024, height = 768)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50)) + 
-	geom_line(linetype = "dashed", colour = "orange") + 
-	geom_smooth(color = "red", method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
-	labs(title = "50 liralık benzin kaç litre ediyor?", x = "Tarih", y = "Litre Kurşunsuz Benzin") +
+	geom_line(size = 1, linetype = "dotted", colour = "orange") + 
+	geom_smooth(size = 2, color = "turquoise", se = FALSE,  method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
+	labs(title = "50 Lira ile Kaç Litre Benzin Alınabiliyor?", x = "Tarih", y = "Kurşunsuz Benzin (Lt.)") +
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+  scale_y_continuous(breaks = seq(0, 20,2)) +
 	gg_theme() +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "KacKilometre.jpeg", width = 1920, height = 1080)
+jpeg(filename = "KacKilometre.jpeg", width = 1024, height = 768)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50gy)) + 
-	geom_line(linetype = "dashed", colour = "orange") + 
-	geom_smooth(color = "red", method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
-	labs(title = "50 liralık benzin kaç km gidiyor?", x = "Tarih", y = "Kilometre") +
+	geom_line(size = 1, linetype = "dotted", colour = "orange") + 
+	geom_smooth(size = 2, color = "turquoise", se = FALSE, method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
+	labs(title = "50 liralık benzin ile kaç km. yol gidiliyor?", x = "Tarih", y = "Ortalama Gidilen Yol (Km.)") +
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+  scale_y_continuous(breaks = seq(100, 300, 25)) +
 	gg_theme() +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "Degisimler_(Senelik_Adet).jpeg", 1920, 1080)
-ggplot(data = veri_yil, aes(x = yil, y = adet, col = degisim)) +
+jpeg(filename = "Degisimler_(Senelik_Adet).jpeg", 1024, 768)
+ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = adet, col = degisim)) +
 	geom_line(size = 2) +
 	labs(title = "Senelik Zam ve İndirim Adetleri", x = "Yıl", y = "Adet") + 
-	scale_color_discrete(name = "Değişim Tipi\n",
+	scale_color_discrete(name = "Güncelleme Tipi\n",
 											 breaks = c("Zam", "indirim"), 
 											 labels = c(" Zam", " İndirim")) +
+  scale_x_continuous(breaks = seq(2007, 2020, 1)) +
+  scale_y_continuous(breaks = seq(0, 40, 5)) +
 	gg_theme() +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "Degisimler_(Senelik_TL).jpeg", 1920, 1080)
-ggplot(data = veri_yil, aes(x = yil, y = toplam_TL, col = degisim)) +
+jpeg(filename = "Degisimler_(Senelik_TL).jpeg", 1024, 768)
+ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = toplam_TL, col = degisim)) +
 	geom_line(size = 2) +
 	labs(title = "Senelik Zam ve İndirim Miktarları (TL)", x = "Yıl", y = "TL") + 
-	scale_color_discrete(name = "Değişim Tipi\n",
+	scale_color_discrete(name = "Güncelleme Tipi\n",
 											 breaks = c("Zam", "indirim"), 
-											 labels = c(" Zam Miktarı (TL)", " İndirim Miktarı (TL)")) +
+											 labels = c("Toplam Yapılan\nSenelik Zam (TL)", "Toplam Yapılan\nSenelik İndirim (TL)")) +
+  scale_x_continuous(breaks = seq(2007, 2020, 1)) +
+  scale_y_continuous(breaks = seq(0, 3, .25)) +
 	gg_theme() +
 	theme(text = element_text(size=30))
 dev.off()
+
+
+# Daha önceden açıklama kısmında yer alan bu güncelleme notlarını kodlara taşımayı uygun gördüm. 
+# # Güncellemeler
+# 
+# ## Güncelleme (2020-02-02)
+# Son iki yılda kur inanılmaz dalgalandı. Benzin fiyatları da onu takip etti. Tabii ki bu dalgalanma siyasi sonuçlar da doğurdu. Bu verileri hazırlarken *T A M A M mı?* diye sormuşum. Cumhurbaşkanlığı seçimini tamam mı? diyenler kaybetse de, İstanbul seçimini kazandılar. Ek olarak;
+# 
+# * Rapora görselleri ekledim.
+# * Temaları güncelledim.
+# 
+# ## Güncelleme (2018-05-08)
+# 8 Mayıs 2018 tarihi itibariyle $/₺ kurunun 4.30 değerini aşması sonucu bu çalışmayı güncelleme ihtiyacı hissettim.
+# Yukarıdaki belirlediğim kurallar baki kalmak üzere 01-12-2017 ile 08-05-2018 tarihleri arası benzin verilerini yine aynı kaynaktan derledim.
+# Ek olarak;
+# 
+# * Bu güncelleme sonrasında, derlediğim benzin fiyatları verisini de paylaşıma açıyorum, neden daha önce açmamış isem zaten??
+# * Temaları güncelledim ve temamı oluşturan dosyayı yükledim.
+# * Doğru smoothing-out tekniğini kullanıp, kullanmadığımı sorguladım. Veriye daha iyi uyduğunu düşündüğüm için **GAM yöntemini terkettim**. Onun yerine zaman ile km ve zaman ile lt arasında **4. dereceden bir ilişki olduğunu varsayarak** yeni grafikleri çizdirdim.
+# * 2018 yılının toplam zam miktarını değerlendirirken; **sadece 5 aylık veriyi** dahil ettiğimi göz önünde bulundurunuz.
+# 
+# Eskiden görseller için verdiğim bu bağlantılar maalesef twitter hesabımı kapamam nedeniyle artık erişilemez durumdadır. Talep edildiği takdirde bu veriyi de paylaşabilirim.
+# Görseller için: [2017AralıkVersiyonu](https://twitter.com/kazimanil/status/936331512638791681), [2018MayısVersiyonu](https://twitter.com/kazimanil/status/993926671752417280).
+# 
