@@ -1,8 +1,8 @@
 # Data Input -----
 rm(list = ls()); gc()
-source("GGPlot_Theme.R")
+source("gg_theme.R")
 veri <- fread("HamVeri.csv")
-veri[, ':='( tarih = as.Date(tarih, format = "%d.%m.%Y"),
+veri[, ':='( tarih = as.Date(tarih, format = "%d/%m/%Y"),
 						 kursunsuz = as.numeric(gsub(pattern = ",", replacement = ".", x = kursunsuz)),
 						 dizel = as.numeric(gsub(pattern = ",", replacement = ".", dizel))
 						 )]
@@ -44,42 +44,42 @@ veri_yil[, toplam_TL := ort_TL * adet]
 
 # Graphics Output ----
 dev.off()
-jpeg(filename = "KaçLitre.jpeg", width = 1920, height = 1080)
+jpeg(filename = "KacLitre.jpeg", width = 1920, height = 1080)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50)) + 
 	geom_line(linetype = "dashed", colour = "orange") + 
 	geom_smooth(color = "red", method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
 	labs(title = "50 liralık benzin kaç litre ediyor?", x = "Tarih", y = "Litre Kurşunsuz Benzin") +
-	theme_dt() +
+	gg_theme() +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "KaçKilometre.jpeg", width = 1920, height = 1080)
+jpeg(filename = "KacKilometre.jpeg", width = 1920, height = 1080)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50gy)) + 
 	geom_line(linetype = "dashed", colour = "orange") + 
 	geom_smooth(color = "red", method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
 	labs(title = "50 liralık benzin kaç km gidiyor?", x = "Tarih", y = "Kilometre") +
-	theme_dt() +
+	gg_theme() +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "Degisimler (Senelik Adet).jpeg", 1920, 1080)
+jpeg(filename = "Degisimler_(Senelik_Adet).jpeg", 1920, 1080)
 ggplot(data = veri_yil, aes(x = yil, y = adet, col = degisim)) +
 	geom_line(size = 2) +
 	labs(title = "Senelik Zam ve İndirim Adetleri", x = "Yıl", y = "Adet") + 
 	scale_color_discrete(name = "Değişim Tipi\n",
 											 breaks = c("Zam", "indirim"), 
 											 labels = c(" Zam", " İndirim")) +
-	theme_dt() +
+	gg_theme() +
 	theme(text = element_text(size=30))
 dev.off()
 
-jpeg(filename = "Degisimler (Senelik TL).jpeg", 1920, 1080)
+jpeg(filename = "Degisimler_(Senelik_TL).jpeg", 1920, 1080)
 ggplot(data = veri_yil, aes(x = yil, y = toplam_TL, col = degisim)) +
 	geom_line(size = 2) +
 	labs(title = "Senelik Zam ve İndirim Miktarları (TL)", x = "Yıl", y = "TL") + 
 	scale_color_discrete(name = "Değişim Tipi\n",
 											 breaks = c("Zam", "indirim"), 
 											 labels = c(" Zam Miktarı (TL)", " İndirim Miktarı (TL)")) +
-	theme_dt() +
+	gg_theme() +
 	theme(text = element_text(size=30))
 dev.off()
