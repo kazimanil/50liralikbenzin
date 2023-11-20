@@ -10,12 +10,10 @@ Pompa fiyatları için İstanbul ili, Şişli ilçesi için OPET'in aşağıdaki
 
 Ayrıca hesaplamalara tarih boyutunu ve toplam kat edilen mesafeyi katabilmek için, tüketicinin belirli bir modeli tercih ettiği ve piyasaya sürülen her yeni satın aldığı varsayıldı. Bu çalışma için Volkswagen GOlf modelini tercih ettim. 100 km tüketimleri için aşağıdaki internet sitesinde Wolksvagen Golf 1.4 için belirtilen değerler temel alındı. Otoban ve şehir içi için ortaklaşa belirlenmiş bulunan "Combined" değerler seçildi. [Ulaşmak için tıklayınız.](https://www.autoevolution.com/volkswagen/golf-5-doors/)
 
-* 2003 - 2008 aralığı için VOLKSWAGEN Golf V 5 Doors 1.4 TSI (122 HP) modeli
-* 2008 - 2012 aralığı için VOLKSWAGEN Golf VI 5 Doors 1.4 TSI (122 HP) modeli
-* 2012 - 2017 aralığı için VOLKSWAGEN Golf VII 5 Doors 1.4 TSI BlueMotion 6MT (125 HP) modeli
-* 2017 ve sonrası için VOLKSWAGEN Golf VII 5 Doors 1.4 TSI 6MT (125 HP) modeli
-
-Not: 2019 ve sonrası için VOLKSWAGEN Golf VIII 5 Doors 1.5L TSI 6MT (130 HP) modeli piyasaya sürülmüş olsa da, henüz yakıt kullanım değerleri yayınlanmadığı için çalışmaya dahil edemedim.
+* 2003 - 2008 aralığı için VOLKSWAGEN Golf V 5 Doors 1.4 TSI (122 HP) modeli (6.3 LT / 100 KM)
+* 2008 - 2012 aralığı için VOLKSWAGEN Golf VI 5 Doors 1.4 TSI (122 HP) modeli (6.2 LT / 100 KM)
+* 2012 - 2019 aralığı için VOLKSWAGEN Golf VII 5 Doors 1.4 TSI BlueMotion 6MT (125 HP) modeli (5.2 LT / 100 KM)
+* 2019 ve sonrası için VOLKSWAGEN Golf VIII 5 Doors 1.5L TSI 6MT (130 HP) modeli (4.8 LT / 100 KM) [ (kaynak)[https://volkswagen.drive.place/golf/viii/group_hatchback_5d/617000] ]
 
 ## Sonuçlar
 

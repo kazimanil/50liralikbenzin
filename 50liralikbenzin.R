@@ -15,10 +15,10 @@ veri[tarih < as.Date("2008-01-01")
 		 , BenzinTuk := 6.3]
 veri[tarih >= as.Date("2008-01-01") & tarih < as.Date("2012-01-01")
 		 , BenzinTuk := 6.2]
-veri[tarih >= as.Date("2012-01-01") & tarih < as.Date("2017-01-01")
+veri[tarih >= as.Date("2012-01-01") & tarih < as.Date("2019-01-01")
 		 , BenzinTuk := 5.2]
-veri[tarih >= as.Date("2017-01-01")
-		 , BenzinTuk := 5.2]
+veri[tarih >= as.Date("2019-01-01")
+		 , BenzinTuk := 4.8]
 
 veri[, ':='(kursunsuz50gy = 100 *kursunsuz50 / BenzinTuk)]
 
