@@ -2,25 +2,23 @@
 rm(list = ls()); gc()
 source("https://raw.githubusercontent.com/kazimanil/project_kaf/master/gg_theme.R") # My Theme for GGPlot2
 veri <- fread("HamVeri.csv")
-veri[, ':='( tarih = as.Date(tarih, format = "%d/%m/%Y"),
-						 kursunsuz = as.numeric(gsub(pattern = ",", replacement = ".", x = kursunsuz)),
-						 dizel = as.numeric(gsub(pattern = ",", replacement = ".", dizel))
-						 )]
-veri[, ':='(kursunsuz50 = 50 / kursunsuz,
-						dizel50 = 50 / dizel)]
+veri[, ':='( 
+	tarih = as.Date(tarih, format = "%d/%m/%Y"),
+	kursunsuz = as.numeric(gsub(pattern = ",", replacement = ".", x = kursunsuz)),
+	dizel = as.numeric(gsub(pattern = ",", replacement = ".", dizel))
+	)]
+veri[, ':='(
+	kursunsuz50 = 50 / kursunsuz,
+	dizel50 = 50 / dizel)]
 
 # Fuel Consumption Statistics ----
 # taken from autoevolution.com
-veri[tarih < as.Date("2008-01-01")
-		 , BenzinTuk := 6.3]
-veri[tarih >= as.Date("2008-01-01") & tarih < as.Date("2012-01-01")
-		 , BenzinTuk := 6.2]
-veri[tarih >= as.Date("2012-01-01") & tarih < as.Date("2019-01-01")
-		 , BenzinTuk := 5.2]
-veri[tarih >= as.Date("2019-01-01")
-		 , BenzinTuk := 4.8]
+veri[tarih < as.Date("2008-01-01"), BenzinTuk := 6.3]
+veri[tarih >= as.Date("2008-01-01") & tarih < as.Date("2012-01-01"), BenzinTuk := 6.2]
+veri[tarih >= as.Date("2012-01-01") & tarih < as.Date("2019-01-01"), BenzinTuk := 5.2]
+veri[tarih >= as.Date("2019-01-01"), BenzinTuk := 4.8]
 
-veri[, ':='(kursunsuz50gy = 100 *kursunsuz50 / BenzinTuk)]
+veri[, ':='(kursunsuz50gy = 100 * kursunsuz50 / BenzinTuk)]
 
 # Now let's check how many increments have happened over years.
 veri[, kursunsuz_1 := shift(kursunsuz, n = 1, type = "lag")]
@@ -28,18 +26,24 @@ veri[, zam := ifelse(kursunsuz > kursunsuz_1, 1, 0)]
 veri[, indirim := ifelse(kursunsuz < kursunsuz_1, 1, 0)]
 veri[, degisim := abs(kursunsuz - kursunsuz_1)]
 
-veri_yil = veri[, .(degisim = .N, Zam = sum(zam, na.rm = T), indirim = sum(indirim, na.rm = T))
-								, .(yil = year(tarih))]
+veri_yil = veri[, .(
+	degisim = .N, 
+	Zam = sum(zam, na.rm = T), 
+	indirim = sum(indirim, na.rm = T)
+	), .(yil = year(tarih))]
 veri_yil = melt.data.table(veri_yil[, c(1,3,4)], id.vars = "yil", variable.name = "degisim", value.name = "adet")
 
-veri_yil2 = veri[, .(Zam     = round(sum(ifelse(zam ==1, degisim, 0), na.rm = T) / sum(zam, na.rm = T), digits = 4),
-										 indirim = round(sum(ifelse(indirim ==1, degisim, 0), na.rm = T) / sum(indirim, na.rm = T), digits = 4))
-								 , .(yil = year(tarih))]
+veri_yil2 = veri[, .(
+	Zam = round(sum(ifelse(zam ==1, degisim, 0), na.rm = T) / sum(zam, na.rm = T), digits = 4),
+	indirim = round(sum(ifelse(indirim ==1, degisim, 0), na.rm = T) / sum(indirim, na.rm = T), digits = 4)
+	), .(yil = year(tarih))]
 veri_yil2 = melt.data.table(veri_yil2, id.vars = "yil", variable.name = "degisim", value.name = "ort_TL")
 
-veri_yil = merge(veri_yil,
-								 veri_yil2,
-								 by = c("yil", "degisim")); rm(veri_yil2)
+veri_yil = merge(
+	veri_yil,
+	veri_yil2,
+	by = c("yil", "degisim")
+	); rm(veri_yil2)
 veri_yil[, toplam_TL := ort_TL * adet]
 
 # Graphics Output ----
@@ -70,9 +74,11 @@ jpeg(filename = "Grafik_3.jpeg", 1024, 768)
 ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = adet, fill = degisim)) +
 	geom_col(position = "dodge") +
 	labs(title = "Senelik Zam ve İndirim Adetleri", x = "Yıl", y = "Adet") +
-	scale_fill_discrete(name = "Güncelleme Tipi\n",
-											 breaks = c("Zam", "indirim"),
-											 labels = c(" Zam", " İndirim")) +
+	scale_fill_discrete(
+		name = "Güncelleme Tipi\n",
+		breaks = c("Zam", "indirim"),
+		labels = c(" Zam", " İndirim")
+		) +
   scale_x_continuous(breaks = seq(2007, 2019, 1)) +
   scale_y_continuous(breaks = seq(0, 30, 5)) +
 	gg_theme() +
@@ -83,9 +89,11 @@ jpeg(filename = "Grafik_4.jpeg", 1024, 768)
 ggplot(data = veri_yil[yil != 2020], aes(x = yil, y = toplam_TL, fill = degisim)) +
 	geom_col(position = "dodge") +
 	labs(title = "Senelik Zam ve İndirim Miktarları (TL)", x = "Yıl", y = "TL") +
-  scale_fill_discrete(name = "Güncelleme Tipi\n",
-											 breaks = c("Zam", "indirim"),
-											 labels = c("Toplam Yapılan\nSenelik Zam (TL)", "Toplam Yapılan\nSenelik İndirim (TL)")) +
+  scale_fill_discrete(
+	name = "Güncelleme Tipi\n",
+	breaks = c("Zam", "indirim"),
+	labels = c("Toplam Yapılan\nSenelik Zam (TL)", "Toplam Yapılan\nSenelik İndirim (TL)")
+	) +
   scale_x_continuous(breaks = seq(2007, 2019, 1)) +
   scale_y_continuous(breaks = seq(0, 3, .25)) +
 	gg_theme() +
