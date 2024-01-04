@@ -4,11 +4,11 @@
 
 Daha sonra, $/₺ kurunun 4.30'u aşmasıyla, 2018 yılında sonuçları güncelleyip Twitter hesabımdan bir kez daha paylaştım. Bu güncellemeden yaklaşık iki yıl sonra Şubat 2020'de hem veriyi hem de çıktılarımı güncelleme kararı aldım. 2020 yılı çıktılarıma [buradan](https://github.com/kazimanil/50liralikbenzin/2020) ulaşabilirsiniz.
 
-2020'den bu yana enflasyondaki yüksek artış hızıyla beraber, benzer çalışmalar gündeme geldi ve tartışmaya açıldı. [Tantuni endeksi](https://twitter.com/oguzergin/status/1504793264637030403) bu çalışmalar arasında bilinen örneklerdendir. 2023 yılının Aralık ayında son bir kez bu veriyi güncelleme kararı aldım. Bu sayfanın kalanında veri toplama yöntemlerim ve çıktılarım hakkında ayrıntılı bilgiler bulacaksınız. 
+2020'den bu yana enflasyondaki yüksek artış hızıyla beraber, benzer çalışmalar gündeme geldi ve tartışmaya açıldı. [Tantuni endeksi](https://twitter.com/oguzergin/status/1504793264637030403) bu çalışmalar arasında bilinen örneklerdendir. 2024 yılının başında son bir kez bu veriyi güncelleme kararı aldım. Bu sayfanın kalanında veri toplama yöntemlerim ve çıktılarım hakkında ayrıntılı bilgiler bulacaksınız. 
 
 # Veri
 
-Pompa fiyatları için İstanbul ili, Şişli ilçesi için OPET'in web-sitesinde yayınlamış olduğu kurşunsuz benzin ve motorin fiyatları temel aldım. [Ulaşmak için tıklayınız.](https://www.opet.com.tr/gecmis-tarihli-akaryakit-fiyatlari#istanbul) 5 Ocak 2007 ve 17 Kasım 2023 tarihleri arasındaki benzin fiyatlarını bu siteden farklı tarihlerde derledim. Veri setini indirmek için [tıklayınız](https://github.com/kazimanil/50liralikbenzin/blob/master/HamVeri.csv).
+Pompa fiyatları için İstanbul ili, Şişli ilçesi için OPET'in web-sitesinde yayınlamış olduğu kurşunsuz benzin ve motorin fiyatları temel aldım. [Ulaşmak için tıklayınız.](https://www.opet.com.tr/gecmis-tarihli-akaryakit-fiyatlari#istanbul) 5 Ocak 2007 ve 31 Aralık 2023 tarihleri arasındaki benzin fiyatlarını bu siteden farklı tarihlerde derledim. Veri setini indirmek için [tıklayınız](https://github.com/kazimanil/50liralikbenzin/blob/master/HamVeri.csv).
 
 Ayrıca hesaplamalara tarih boyutunu ve toplam kat edilen mesafeyi katabilmek için, tüketicinin belirli bir modeli tercih ettiği ve piyasaya sürülen her yeni satın aldığı varsaydım. Bu çalışma için, çalışmaya başladığım yıllarda orta sınıf için ulaşabilir bir araç olan, Volkswagen markasının Golf modelini tercih ettim. 100 km tüketimleri için aşağıda paylaştığım kaynakların Wolksvagen Golf 1.4 için yayınladığı değerler temel aldım. Otoban ve şehir içi için ortaklaşa belirlenmiş bulunan "Combined" değerleri kolaylık açısından seçtim. 
 
