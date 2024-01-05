@@ -19,9 +19,13 @@ Ayrıca hesaplamalara tarih boyutunu ve toplam kat edilen mesafeyi katabilmek i�
 
 # Çıktılar
 
+Hem ilk iki grafikten hem de Tantuni endeksi gibi diğer bilinen endekslerin de gösterdiği üzere, 50 liranın zamanla hem alım gücü hem de yol gitme gücü azaldı. Bu düşüşün daha sertleştiği iki dönem bulunuyor. Bunlardan bir tanesi "teğet geçen" 2008 krizi civarında yoğunlaşıyor. Bir diğeri de "Faiz sebep enflasyon sonuçtur" ekonomisini sürdürdüğümüz ve pandemi nedeniyle hem TL'nin değer kaybettiği hem de enflasyon sarmalına giriş yaptığımız 2021 sonrası döneme denk düşüyor.
+
 ![Kaç Litre Benzin Alabildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_1.jpeg)
 
 ![Kaç KM yol gidebildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_2.jpeg)
+
+Sonraki üç grafik de ilk kısımda yazdığımız bulguları doğrular nitelikte. Senelik zam ve indirim miktarları hem TL hem adet cinsinden 2008-2009 ve 2020-2023 yılları arasında yoğunlaşıyor. Öyle ki; 2020 sonrası indirim miktarlarını TL cinsinden 2020 öncesiyle aynı grafiğe koymak bile mümkün olmadı. Bunun sebebi senelik değişim miktarları 2020 öncesinde toplamda 2 lirayı geçmezken, 2020 ile 5 liraya, 2022 ile 20-30 lira civarına yükseliyor. Aslında bu değişimdeki ani artış, şimdiye kadar kullandığım mutlak değişim grafiklerini de işe yaramaz duruma getiriyor. Bu nedenle altıncı ve yedinci grafiklerde yüzdesel değişimlere odaklanmaya çalıştım.  
 
 ![Senelik Zam ve İndirim Adetleri?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_3.jpeg)
 
@@ -29,8 +33,21 @@ Ayrıca hesaplamalara tarih boyutunu ve toplam kat edilen mesafeyi katabilmek i�
 
 ![2020 ve Sonrası Senelik Değişim](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_4b.jpeg)
 
+Türkiye ekonomisinin ciddi krizler ile sınanmadığı yıllarda benzin fiyatlarındaki yıllık değişim en fazla %10 ile sınırlı kalırken; 2008-2009 krizi ve özellikle Yeni Ekonomi Modeli'nin değendiği yıllarda yıllık değişimler %40'ın üzerinde seyrediyor. Çalışanların taşınmasından poşetlerin üretimine, ürünlerin dağıtımından tatil harcamalarına birçok kalemi doğrudan ve dolaylı etkileyen benzin fiyatlarının; benzinin "50 liralık" alınabildiği dönemlere göre çok yükseldiği aşikar. Hatta ve hatta artık "50 liraya" pompanın açılmayacağı günümüzde bu yükselişin hayatımızı bir enflasyon sarmalığına sürüklediği de ifade edilebilir. Bu nedenle, benzin fiyatlarındaki değişimi TÜİK'in yıllık enflasyon verileriyle kıyaslamayı da uygun gördüm. 
+
+Benzin fiyatımızın hayatımızın her alanına etkide bulunması %71 gibi yüksek bir korelasyon ile doğrulanıyor diyebiliriz. İki grafiğin birbirinden kriz dönemlerinde (2009, 2021, 2023) ayrışması kriz dönemlerine has bir örüntüye benziyor. Ancak TÜİK verilerinin güvenilirliğinin tartışılmaya açıldığı 2021 yılındaki büyük farkı, belki de, TÜİK verilerinin güvenilir olmayışıyla açıklamak olasıdır. Ancak TÜİK verilerinin güvenilirliğini tartışmaya açmak bu çalışmanın odağında değildir. 
+
 ![Senelik Değişim](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_5.jpeg)
 
 ![Gösterge Kıyası?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_6.jpeg)
 
 # Değerlendirme
+
+3-4 senelik aralıklarla 3 defa güncellediğim **50 Liralık Benzin** adlı çalışmamı hayatımda yakaladığım bir boşlukla, sanıyorum, son bir kez daha 2024 yılının Ocak ayında güncelledim. 50 liraya yemek yemeye dahi zorlanılan günümüzde, bu çalışmayı şimdiki formatıyla devam ettirmenin bir anlamı olacağını sanmıyorum. Şimdiki formatıyla elde ettiğimiz bulgularıysa aşağıdaki gibi özetlemek mümkündür:
+
+- Hep "50 Liralık" benzin almak artık olası değildir.
+- 50 Lira'nın alım gücü, özellikle 2020 yılı sonrası olmak üzere, son 15 yılda düzenli olarak erimiştir.
+- Türkiye'de ekonomik darboğaz, benzin fiyatlarındaki dalgalanma ile takip edilebilir. Bunun olası en büyük nedeni benzin fiyatlarının dövizdeki dalgalanmalara ve vergi miktarlarındaki dalgalanmalara tabii olmasıdır.
+- Benzin doğrudan veya dolaylı olarak enflasyon sepetindeki birçok kalemin fiyatını etkilemektedir. Bu nedenle enflasyonu dizginlemek için yapılacak politikalardan biri ülkemizdeki benzin fiyatlarındaki oynaklığı azaltmaktan geçiyor olabilir.
+
+Esenlikle,
