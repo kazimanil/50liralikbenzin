@@ -189,7 +189,7 @@ ggplot(data = enflasyon) +
     linewidth = 2
   ) +
   labs(
-    title = "İki farklı gösterge ile Enflasyon", 
+    title = "TUIK ile Kıyas", 
     subtitle = paste0("Korelasyon: %", korelasyon),
     colour = "",
     x = "Yıl", 
