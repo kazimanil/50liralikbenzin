@@ -16,3 +16,21 @@ Ayrıca hesaplamalara tarih boyutunu ve toplam kat edilen mesafeyi katabilmek i�
 * 2008 - 2012 aralığı için VOLKSWAGEN Golf VI 5 Doors 1.4 TSI (122 HP) modeli (6.2 LT / 100 KM) [(kaynak)](https://www.autoevolution.com/volkswagen/golf-5-doors/)
 * 2012 - 2019 aralığı için VOLKSWAGEN Golf VII 5 Doors 1.4 TSI BlueMotion 6MT (125 HP) modeli (5.2 LT / 100 KM) [(kaynak)](https://www.autoevolution.com/volkswagen/golf-5-doors/)
 * 2019 ve sonrası için VOLKSWAGEN Golf VIII 5 Doors 1.5L TSI 6MT (130 HP) modeli (4.8 LT / 100 KM) [(kaynak)](https://volkswagen.drive.place/golf/viii/group_hatchback_5d/617000)
+
+# Çıktılar
+
+![Kaç Litre Benzin Alabildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_1.jpeg)
+
+![Kaç KM yol gidebildik?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_2.jpeg)
+
+![Senelik Zam ve İndirim Adetleri?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_3.jpeg)
+
+![2020 ve Öncesi Senelik Değişim](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_4.jpeg)
+
+![2020 ve Sonrası Senelik Değişim](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_4b.jpeg)
+
+![Senelik Değişim](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_5.jpeg)
+
+![Gösterge Kıyası?](https://github.com/kazimanil/50liralikbenzin/blob/master/Grafik_6.jpeg)
+
+# Değerlendirme

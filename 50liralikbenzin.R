@@ -92,7 +92,7 @@ jpeg(filename = "Grafik_1.jpeg", width = 1024, height = 768)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50)) +
 	geom_line(linewidth = 1, linetype = "dotted", colour = "orange") +
 	geom_smooth(size = 2, color = "turquoise", se = FALSE,  method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
-	labs(title = "50 Lira ile Kaç Litre Benzin Alınabiliyor?", x = "Tarih", y = "Kurşunsuz Benzin (Lt.)") +
+	labs(title = "50 Lira ile Kaç   Litre Benzin Alınabiliyor?", x = "Tarih", y = "Kurşunsuz Benzin (Lt.)") +
   scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
   scale_y_continuous(breaks = seq(0, 20,2)) +
 	gg_theme() +
@@ -103,7 +103,7 @@ jpeg(filename = "Grafik_2.jpeg", width = 1024, height = 768)
 ggplot(data = veri, aes(x = tarih, y = kursunsuz50gy)) +
 	geom_line(linewidth = 1, linetype = "dotted", colour = "orange") +
 	geom_smooth(size = 2, color = "turquoise", se = FALSE, method = "lm", formula = y ~ poly(x,4)) + # geom_smooth(color = "red") +
-	labs(title = "50 liralık benzin ile kaç km. yol gidiliyor?", x = "Tarih", y = "Ortalama Gidilen Yol (Km.)") +
+	labs(title = "50 liralık benzin ile kaç   km. yol gidiliyor?", x = "Tarih", y = "Ortalama Gidilen Yol (Km.)") +
   scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
   scale_y_continuous(breaks = seq(25, 300, 25)) +
 	gg_theme() +
